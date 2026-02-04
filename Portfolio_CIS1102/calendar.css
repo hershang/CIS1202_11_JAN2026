@@ -1,0 +1,149 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    background-size: 100%;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    border: 2px solid #6a040f;
+  }
+
+
+  
+  nav {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.3); 
+    backdrop-filter: blur(5px); 
+  }
+  
+  .logo img {
+    width: 60px;
+    height: auto;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    padding: 5px;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a.active {
+    font-weight: bold;
+    color: #ff6f61;
+  }
+  
+  .nav-links li a:hover {
+    color: #ff6f61;
+  }
+  
+  .nav-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #ff6f61;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-links li a:hover::after {
+    width: 100%;
+  }
+
+  table {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    margin: 0 auto;
+    width: 90%;
+    border-collapse: collapse;
+    text-align: center;
+    background: linear-gradient(to right, #fcefb4, #ffe566, #fcefb4);
+}
+ 
+.calendar-title {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 48px;
+    color: #c36f09; 
+    text-align: center; 
+    margin: 20px 0; 
+}
+th, td {
+    border: 1px solid black;
+    padding: 0;
+    height: calc(70vh / 6); 
+    width: calc(90vw / 7); 
+    overflow: hidden;
+}
+th {
+    background-color: #ffecd2;
+    font-size: 1.2em;
+    color: #c36f09;
+    height: auto; 
+}
+  
+.calendar {
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calendar h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #c36f09;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+.calendar-day {
+    padding: 20px;
+    text-align: center;
+    background-color: #ffe4dc;
+    border-radius: 8px;
+    color:#c36f09;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.calendar-day:hover {
+    background-color: #ff907b;
+    color: white;
+}
+
+.calendar-day.today {
+    background-color: #ffb59b;
+}
+
