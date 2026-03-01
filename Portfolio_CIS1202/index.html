@@ -2,36 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Personal Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio | IT Professional</title>
+    <meta name="description" content="Professional portfolio showcasing IT background, skills, and projects.">
 </head>
 <body>
+    <a href="#main-content">Skip to main content</a>
 
     <header>
-        <!-- You can add your logo or heading here -->
+        <p>Portfolio</p>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <main id="main-content">
+        <section id="hero" aria-labelledby="hero-heading">
+            <h1 id="hero-heading">Hi, I'm Hersheay!</h1>
+            <p>IT Professional · Problem Solver · Lifelong Learner</p>
+            <a href="#projects">View My Work</a>
+        </section>
 
-    <main>
-        <section id="about"></section>
-        <section id="projects"></section>
-        <section id="skills"></section>
-        <section id="education"></section>
-        <section id="contact"></section>
+        <section id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">About Me</h2>
+            <p>
+                I'm an IT professional with a strong foundation in systems, networking, and software development.
+                My experience spans technical support, infrastructure management, and building solutions that
+                improve efficiency and user experience.
+            </p>
+            <p>
+                I'm passionate about staying current with technology trends and applying best practices in
+                security, automation, and clean code. I enjoy turning complex problems into simple, reliable
+                solutions.
+            </p>
+        </section>
+
+        <section id="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Projects</h2>
+            <ul>
+                <li>
+                    <article>
+                        <h3>Project One</h3>
+                        <p>Brief description: what it does, technologies used, and the problem it solves.</p>
+                        <a href="#">View project</a>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <h3>Project Two</h3>
+                        <p>Brief description: goals, your role, and outcomes.</p>
+                        <a href="#">View project</a>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <h3>Project Three</h3>
+                        <p>Brief description: stack, challenges, and learnings.</p>
+                        <a href="#">View project</a>
+                    </article>
+                </li>
+            </ul>
+        </section>
     </main>
 
     <footer>
-        <!-- Footer content here -->
+        <p>&copy; <span id="year"></span> Your Name. All rights reserved.</p>
     </footer>
 
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
