@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="#main-content">Skip to main content</a>
+    
 
     <header>
         <p>Portfolio</p>
         <nav aria-label="Main navigation">
-            <ul>
+            <ul class="nav-links">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -23,8 +23,11 @@
 
     <main id="main-content">
         <section id="hero" aria-labelledby="hero-heading">
-            <h1 id="hero-heading">Hi, I'm <b>HERSHEAY</b>!</h1>
-            <p>IT Professional · Problem Solver · Lifelong Learner</p>
+            <img src="profile.jpg" alt="Profile photo of HERSHEAY" class="profile-photo" style="display: block; margin: 0 auto 1.5rem auto; width: 160px; height: 160px; object-fit: cover; border-radius: 50%; border: 3px solid #e2e8f0; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
+            <div style="text-align: center;">
+                <h1 id="hero-heading" style="margin-bottom: 0.5rem;">Hi, I'm <b>HERSHEAY</b>!</h1>
+                <p style="margin-top: 0; font-size: 1.15rem;">IT Professional · Problem Solver · Lifelong Learner</p>
+            </div>
             <a href="#projects">View My Work</a>
         </section>
 
@@ -44,7 +47,7 @@
 
         <section id="projects" aria-labelledby="projects-heading">
             <h2 id="projects-heading">Projects</h2>
-            <ul>
+            <ul class="project-links">
                 <li>
                     <article>
                         <h3>Project One</h3>
@@ -72,10 +75,9 @@
 
     <footer>
         <p>&copy; <span id="year"></span> Your Name. All rights reserved.</p>
+        <button id="dark-mode-toggle" type="button">Toggle Dark Mode</button>
     </footer>
 
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
