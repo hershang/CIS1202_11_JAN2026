@@ -12,3 +12,20 @@ if (darkModeToggle) {
   });
 }
 
+const techPanel = document.getElementById('tech-skills');
+const softPanel = document.getElementById('soft-skills');
+const showTech = document.getElementById('show-tech');
+const showSoft = document.getElementById('show-soft');
+
+if (techPanel && softPanel && showTech && showSoft) {
+  showTech.addEventListener('click', () => {
+    techPanel.classList.add('is-active');
+    softPanel.classList.remove('is-active');
+  });
+
+  showSoft.addEventListener('click', () => {
+    softPanel.classList.add('is-active');
+    techPanel.classList.remove('is-active');
+  });
+}
+

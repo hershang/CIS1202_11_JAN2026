@@ -102,3 +102,11 @@ header nav a {
 header nav a:hover {
     color: var(--color-accent);
 }
+
+.skills-panel {
+    display: none;         /* hidden by default */
+  }
+  
+  .skills-panel.is-active {
+    display: block;        /* only the active one shows */
+  }
