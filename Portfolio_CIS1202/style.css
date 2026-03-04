@@ -1,26 +1,24 @@
 /*
  * Professional color scheme (CSS variables)
- * Use these throughout the site for consistency.
  */
 :root {
     /* Primary palette */
-    --color-primary: #DE6C83;
-    --color-primary-light: #DE6C83;
+    --color-primary: #efb627;
+    --color-primary-light: #f6fc8e;
     --color-accent: #2b6cb0;
     --color-accent-hover: #1a365d;
 
     /* Neutrals */
     --color-bg: #f7fafc;
     --color-surface: #ffffff;
-    --color-text: #DE6C83;
+    --color-text: #d8a90c;
     --color-text-muted: #4a5568;
-    --color-border: #f4879d;
+    --color-border: #e2e8f0;
 
-    /* Spacing (for padding/margin) */
-    --space-sm: 0.5rem;   /* 8px  - tight spacing */
-    --space-md: 1rem;     /* 16px - default padding */
-    --space-lg: 1.5rem;   /* 24px - comfortable padding */
-    --space-xl: 2rem;     /* 32px - section padding */
+    /* Spacing – use these for padding (and margin) */
+    --space-sm: 0.5rem;   /* 8px  – tight */
+    --space-md: 1rem;     /* 16px – default */
+    --space-lg: 1.5rem;   /* 24px – comfortable */
 }
 
 /* ----- Nav bar: Flexbox, evenly spaced links ----- */
@@ -29,11 +27,11 @@ header {
     justify-content: space-between;
     align-items: center;
     /*
-     * Box model & padding:
-     * Padding sits INSIDE the element, between the border and the content.
-     * So the nav bar's total width = width + padding-left + padding-right (and border if any).
-     * Using var(--space-lg) here gives 24px inside the header on all sides,
-     * so the logo and nav links don't sit flush against the edges.
+     * Box model & padding for the header:
+     * Padding is INSIDE the element (between border and content).
+     * So the bar’s total height/width includes this padding.
+     * Using var(--space-lg) here gives 24px on all sides so the
+     * logo and nav don’t sit flush against the edges.
      */
     padding: var(--space-lg);
     background-color: var(--color-surface);
@@ -49,10 +47,7 @@ header p {
 header nav ul {
     display: flex;
     justify-content: space-evenly;
-    /*
-     * space-evenly: equal space before first item, between items, and after last item.
-     * So the four links are spread evenly across the nav's available width.
-     */
+    /* space-evenly: equal space before first item, between items, after last item */
     gap: var(--space-md);
     margin: 0;
     padding: 0;
@@ -61,39 +56,18 @@ header nav ul {
 
 header nav a {
     /*
-     * Padding on the link (the clickable area) makes it easier to tap
-     * and adds breathing room. Padding is inside the link box, so the
-     * text doesn't sit right on the edge of the hit area.
+     * Box model & padding for each link:
+     * Padding grows the link’s clickable area INSIDE the element.
+     * So the text doesn’t sit on the edge; the link is easier to tap
+     * and looks less cramped. Vertical padding (--space-sm) and
+     * horizontal (--space-md) give a balanced hit area.
      */
     padding: var(--space-sm) var(--space-md);
-    color: var(--color-text);
+    color: #ad7900;
     text-decoration: none;
     font-weight: 500;
 }
 
 header nav a:hover {
     color: var(--color-accent);
-}
-
-/* ----- Hero: profile photo beside heading, centered ----- */
-#hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-#hero .hero-intro {
-    display: flex;
-    align-items: center;
-    gap: var(--space-lg);
-}
-
-#hero .hero-photo {
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-#hero-heading {
-    margin-top: 1in;
 }
