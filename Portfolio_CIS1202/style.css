@@ -8,10 +8,10 @@
     --color-accent: #2b6cb0;
     --color-accent-hover: #1a365d;
 
-    /* Neutrals */
+    /* Neutrals - light mode */
     --color-bg: #f7fafc;
     --color-surface: #ffffff;
-    --color-text: #d8a90c;
+    --color-text: #1a202c;
     --color-text-muted: #4a5568;
     --color-border: #e2e8f0;
 
@@ -19,6 +19,37 @@
     --space-sm: 0.5rem;   /* 8px  – tight */
     --space-md: 1rem;     /* 16px – default */
     --space-lg: 1.5rem;   /* 24px – comfortable */
+}
+
+/* Base body styles (light mode) */
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+/* Dark mode overrides when .dark-mode is on <body> */
+body.dark-mode {
+    background-color: #1a202c;
+    color: #edf2f7;
+}
+
+body.dark-mode header {
+    background-color: #2d3748;
+    border-bottom-color: #4a5568;
+}
+
+body.dark-mode header p {
+    color: #f6e05e;
+}
+
+body.dark-mode header nav a {
+    color: #e2e8f0;
+}
+
+body.dark-mode header nav a:hover {
+    color: #f6e05e;
 }
 
 /* ----- Nav bar: Flexbox, evenly spaced links ----- */

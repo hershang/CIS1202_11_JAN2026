@@ -23,7 +23,7 @@
 
     <main id="main-content">
         <section id="hero" aria-labelledby="hero-heading">
-            <h1 id="hero-heading">Hi, I'm Hersheay!</h1>
+            <h1 id="hero-heading">Hi, I'm HERSHEAY!</h1>
             <p>IT Professional · Problem Solver · Lifelong Learner</p>
             <a href="#projects">View My Work</a>
         </section>
@@ -72,10 +72,14 @@
 
     <footer>
         <p>&copy; <span id="year"></span> Your Name. All rights reserved.</p>
+        <button id="dark-mode-toggle" type="button">Toggle Dark Mode</button>
+        <div style="margin-top:1rem;font-size:0.9em;color:#888;">
+            <p>
+                <strong>How does <code>classList.toggle</code> work?</strong><br>
+                The <code>classList.toggle("dark-mode")</code> method adds the <code>dark-mode</code> class to the element if it doesn’t have it, or removes it if it does. This makes it easy to switch between modes (for example, dark and light) by adding or removing a CSS class on the <code>&lt;body&gt;</code> or another element.
+            </p>
+        </div>
+        <script src="script.js"></script>
     </footer>
-
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
 </body>
 </html>
